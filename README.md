@@ -1,6 +1,6 @@
 # scala-spark-container for access log processing
 This project has the following artifacts:
-1. Dockerfile
+1. Dockerfile - using Ubuntu
 2. Scala source code for downloading file (access log)
 3. Spark source code for processing the file to find top-N most frequent URLs and visitors
 4. Shell script that is the entry point for the conatiner - it takes two arguments: URL and value of N for top-N
