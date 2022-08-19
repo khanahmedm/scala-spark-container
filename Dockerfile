@@ -41,13 +41,11 @@ ENV DATA_DIR /app/data
 ENV SCALA_DIR /app/scala/download-file
 ENV SPARK_DIR /app/spark/access-log-process
 
-# section 5: Copying the scala and spark code to the container
+# section 5: Copying the scala and spark code to the container and defining the entry point
 COPY app /app
 RUN cd $RUN_DIR && \
     chmod 755 start-scala-spark-job.sh
 
-
-#CMD ["start-scala-spark-job.sh", "https://ditotw.space/NASA_access_log_Jul95.gz", "2"]
 ENTRYPOINT ["start-scala-spark-job.sh"]
 
 # section 6: lines for installing sbt
