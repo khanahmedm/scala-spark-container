@@ -12,8 +12,6 @@
 URL=$1
 topN=$2
 fileName=`basename https://ditotw.space/NASA_access_log_Jul95.gz`
-echo $URL
-echo $fileName
 
 # Remove the file if it already exists in the data directory
 cd $DATA_DIR
@@ -25,6 +23,7 @@ then
 
 fi
 
+# Download the file using scala program and decompress the file using gzip command
 cd $SCALA_DIR
 scala downloadFile $URL
 cd $DATA_DIR
@@ -35,12 +34,15 @@ then
 else
 	echo 'decompressing the file...'
 	gzip -d -f $fileName
+	# retrieve the uncompressed file name that is used by spark program
 	decompressedFileName=`basename -s .gz $fileName`
 	echo 'Decompression completed - resulting file is '$decompressedFileName'.'
 fi
 
+# Process data using spark program
 cd $SPARK_DIR
 spark-submit --class "TopURLsAndVisitors" --master local[4] target/scala-2.12/access-log-processing_2.12-1.0.jar $decompressedFileName $topN
 
+# check if the spark job exited with any issues by looking at the exit code
 status=$?
 [ $status -eq 0 ] && echo "Data processing completed successfully" || "There is a problem with processing, please check."
