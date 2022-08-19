@@ -20,6 +20,7 @@ RUN apt update
 RUN apt install default-jdk -y
 RUN apt install scala -y
 RUN apt install wget -y
+RUN apt install dos2unix -y
 
 # section 3: Downloads apache spark and places the spark install under /opt
 # download and unzip spark distribution
@@ -44,7 +45,8 @@ ENV SPARK_DIR /app/spark/access-log-process
 # section 5: Copying the scala and spark code to the container and defining the entry point
 COPY app /app
 RUN cd $RUN_DIR && \
-    chmod 755 start-scala-spark-job.sh
+    chmod 755 start-scala-spark-job.sh && \
+    dos2unix start-scala-spark-job.sh
 
 ENTRYPOINT ["start-scala-spark-job.sh"]
 
