@@ -25,3 +25,5 @@ https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Linux.html
 https://sparkbyexamples.com/spark/spark-submit-command/  
 https://spark.apache.org/docs/0.9.2/quick-start.html  
 https://medium.com/@raviranjan_iitd/running-a-scala-code-as-a-spark-submit-job-using-sbt-e03ba05b941f  
+https://stackoverflow.com/questions/24162478/how-to-download-and-save-a-file-from-the-internet-using-scala  
+https://alvinalexander.com/scala/scala-how-to-download-url-contents-to-string-file/  
