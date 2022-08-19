@@ -1,0 +1,7 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/ahmed/scala-code/app/spark/access-log-process/target/scala-2.12/access-log-processing_2.12-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TopURLsAndVisitors$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/ahmed/scala-code/app/spark/access-log-process/target/scala-2.12/classes/TopURLsAndVisitors$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TopURLsAndVisitors.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/ahmed/scala-code/app/spark/access-log-process/target/scala-2.12/classes/TopURLsAndVisitors.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
