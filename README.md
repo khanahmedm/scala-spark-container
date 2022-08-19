@@ -12,7 +12,7 @@ docker build -t scala-spark-container .
 
 # Run the following command to execute scala and spark jobs:
 docker run scala-spark-container https://ditotw.space/NASA_access_log_Jul95.gz 3
-where 3 as in top-3
+-- where 3 as in top-3
 
 # To log on to docker container, override the entry point:
 docker run -it --entrypoint /bin/bash scala-spark-container
