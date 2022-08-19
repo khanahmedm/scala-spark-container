@@ -12,10 +12,12 @@ docker build -t scala-spark-container .
 
 # Run the following command to execute scala and spark jobs:
 docker run scala-spark-container https://ditotw.space/NASA_access_log_Jul95.gz 3  
--- where 3 as in top-3
+-- where 3 as in top-3  
+8/19/22: If this command results in saying 'No such file or directory', that could be due to addition from line breaks in the shell script. The dockerfile has the steps to install dos2unix and apply to the shell script.
 
 # To log on to docker container, override the entry point:
-docker run -it --entrypoint /bin/bash scala-spark-container
+docker run -it --entrypoint /bin/bash scala-spark-container  
+
 
 # Resources and references used to work on this project:
 Udemy course: Apache Spark with Scala - Hands On with Big Data!  
