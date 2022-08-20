@@ -36,7 +36,7 @@ cd $SCALA_DIR
 scala downloadFile https://ditotw.space/NASA_access_log_Jul95.gz  
 
 ### Decompress the data file:  
-cd $DATA_DIR
+cd $DATA_DIR  
 gzip -d NASA_access_log_Jul95.gz  
 
 ### Spark code can be run as follows:  
