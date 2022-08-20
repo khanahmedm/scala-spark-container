@@ -19,6 +19,7 @@ if [ "$#" != "2" ]; then
 	exit 1
 fi
 
+# Check to see if the 2nd argument is not a numeric value
 re='^[0-9]+$'
 if ! [[ $topN =~ $re ]] ; then
    echo "Error: 2nd argument is not a number."
