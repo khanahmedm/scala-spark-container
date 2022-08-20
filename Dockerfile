@@ -4,7 +4,7 @@
 # Date Modified: 8/18/22
 # Description : This dockerfile performs the following steps:
 #               1. Uses latest Ubuntu version
-#               2. Installs JDK, Scala, and wget
+#               2. Installs JDK, Scala, wget, and dos2unix
 #               3. Downloads apache spark and places the spark install under /opt
 #               4. Sets up environment variables
 #               5. Copies the scala and spark code to the container
@@ -44,6 +44,7 @@ ENV SPARK_DIR /app/spark/access-log-process
 
 # section 5: Copying the scala and spark code to the container and defining the entry point
 COPY app /app
+# setting permission for the shell script and removing extra line breaks using dos2unix
 RUN cd $RUN_DIR && \
     chmod 755 start-scala-spark-job.sh && \
     dos2unix start-scala-spark-job.sh
