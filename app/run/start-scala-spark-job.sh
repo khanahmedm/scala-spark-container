@@ -11,6 +11,22 @@
 
 URL=$1
 topN=$2
+
+# Check number of arguments passed to the script
+if [ "$#" != "2" ]; then
+    echo "Error: Please provide URL and N value as arguments."
+	echo "Exiting the program."
+	exit 1
+fi
+
+re='^[0-9]+$'
+if ! [[ $topN =~ $re ]] ; then
+   echo "Error: 2nd argument is not a number."
+   echo "Exiting the program."
+   exit 1
+fi
+
+
 fileName=`basename https://ditotw.space/NASA_access_log_Jul95.gz`
 
 # Remove the file if it already exists in the data directory
