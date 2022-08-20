@@ -3,10 +3,10 @@
 # Title: Start scala job for downloading file and spark job for processing data
 # Author: Ahmed M Khan
 # Date Created: 8/18/22
-# Date Modified: 8/18/22
-# Description : This program runs two codes:
-#		1. scala code to download a file from a URL
-#		2. spark job to process data and show top-n frequent URLs and visitors
+# Date Modified: 8/20/22
+# Description : This script runs two programs:
+#		1. Scala program to download a file from a URL
+#		2. Spark program to process data and show top-n frequent URLs and visitors
 #######################################################################################
 
 URL=$1
