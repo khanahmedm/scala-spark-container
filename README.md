@@ -4,7 +4,7 @@ This project has the following artifacts:
 2. Scala source code for downloading file (access log)
 3. Spark source code for processing the file to find top-N most frequent URLs and visitors
 4. Shell script that is the entry point for the container - it takes two arguments: URL and value of N for top-N
-5. Unit testing documents - contains screenshots
+5. Unit testing documents covering test cases with screenshots
 6. Output of the overall process for top-3 most frequent URLs and visitors
 
 
