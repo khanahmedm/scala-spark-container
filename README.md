@@ -7,13 +7,24 @@ This project has the following artifacts:
 5. Unit testing document - contains screenshots
 6. Output of the overall process for top-3 most frequent URLs and visitors
 
+
+# Environment:
+Ubuntu 22.04.1
+Scala code runner version 2.11.12
+Java openjdk version "11.0.16"
+Apache Spark version 3.2.1
+Scala in spark is version 2.12.15
+
+
 # Docker image can be built using the below command:
 docker build -t scala-spark-container .
 
 # Run the following command to execute scala and spark jobs:
 docker run scala-spark-container https://ditotw.space/NASA_access_log_Jul95.gz 3  
 -- where 3 as in top-3  
-8/19/22: If this command results in saying 'No such file or directory', that could be due to addition from line breaks in the shell script. The dockerfile has the steps to install dos2unix and apply to the shell script.
+  
+8/19/22: If the above command results in an error saying 'No such file or directory', that could be due to the addition of line breaks in the shell script. The dockerfile has been modified to include the steps to install dos2unix and apply to the shell script to remove extra line breaks.  
+
 
 # To log on to docker container, override the entry point:
 docker run -it --entrypoint /bin/bash scala-spark-container  
