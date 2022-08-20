@@ -29,6 +29,14 @@ fi
 
 fileName=`basename https://ditotw.space/NASA_access_log_Jul95.gz`
 
+# Check if the data directory does not exist
+if [ ! -d $DATA_DIR ] 
+then
+    echo "Error: The data directory " $DATA_DIR " does not exist." 
+	echo "Exiting the program."
+    exit 1
+fi
+
 # Remove the file if it already exists in the data directory
 cd $DATA_DIR
 
