@@ -13,7 +13,7 @@ Ubuntu 22.04.1
 Scala code runner version 2.11.12  
 Java openjdk version 11.0.16  
 Apache Spark version 3.2.1  
-Scala in spark is version 2.12.15  
+version of Scala in Spark distribution is 2.12.15  
 
 
 # Docker image can be built using the below command:
