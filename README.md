@@ -28,7 +28,7 @@ docker run scala-spark-container https://ditotw.space/NASA_access_log_Jul95.gz 3
 
 # To log on to docker container, override the entry point:
 docker run -it --entrypoint /bin/bash scala-spark-container  
-The shell script can be kicked off using the below command:  
+### Shell script can be kicked off using the below command:  
 start-scala-spark-job.sh https://ditotw.space/NASA_access_log_Jul95.gz 3  
   
 ### Scala code can be run as follows:  
