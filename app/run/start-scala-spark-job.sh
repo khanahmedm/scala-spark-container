@@ -28,7 +28,7 @@ if ! [[ $topN =~ $re ]] ; then
 fi
 
 
-fileName=`basename https://ditotw.space/NASA_access_log_Jul95.gz`
+fileName=`basename $URL`
 
 # Check if the data directory does not exist
 if [ ! -d $DATA_DIR ] 
