@@ -31,15 +31,15 @@ docker run -it --entrypoint /bin/bash scala-spark-container
 The shell script can be kicked off using the below command:  
 start-scala-spark-job.sh https://ditotw.space/NASA_access_log_Jul95.gz 3  
   
-###Scala code can be run as follows:  
+### Scala code can be run as follows:  
 cd $SCALA_DIR  
 scala downloadFile https://ditotw.space/NASA_access_log_Jul95.gz  
 
-###Decompress the data file:  
+### Decompress the data file:  
 cd $DATA_DIR
 gzip -d NASA_access_log_Jul95.gz  
 
-###Spark code can be run as follows:  
+### Spark code can be run as follows:  
 cd $SPARK_DIR  
 spark-submit --class "TopURLsAndVisitors" --master local[4] target/scala-2.12/access-log-processing_2.12-1.0.jar NASA_access_log_Jul95    
 
