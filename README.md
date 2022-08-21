@@ -7,6 +7,13 @@ This project has the following artifacts:
 5. Unit testing documents covering test cases with screenshots
 6. Output of the overall process for top-3 most frequent URLs and visitors
 
+## Assumptions:
+1. It is assumed that the file that is downloaded using the URL is a correctly formatted access log file. There is no check performed to see the integrity of the downloaded file structure.  
+2. The file contains blanks (empty string) for URL and visitor columns in some lines. When processing data for URL, the dataset was filtered to remove rows with blank values in the URL column. Similarly, when processing for visitors, the blank values in the visitor column were filtered out.  
+3. The first column is considered as the visitor column, however, the column contains client machine's host name or IP address.  
+4. On each line, the string value after HTTP method is considered as the URL endpoint.  
+5. It is assumed we do not need to pay special consideration to HTTP response code values in the data file. There is no filter applied based on HTTP response code 200 when processing the data.  
+6. There are 735 duplicate lines in the data file. Deduped has not been applied. It can be either applied using linux commands (sort <filename> | uniq) in the shell script or in the Spark code.
 
 # Environment:
 Ubuntu 22.04.1  
@@ -14,7 +21,6 @@ Scala code runner version 2.11.12
 Java openjdk version 11.0.16  
 Apache Spark version 3.2.1  
 version of Scala in Spark distribution is 2.12.15 -- used in build.sbt
-
 
 # Docker image can be built using the below command:
 docker build -t scala-spark-container .
